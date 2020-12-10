@@ -21,6 +21,8 @@ this.token||(this.token=b.data);this.disposed||!this.hosted||this.ready||(d=!0)}
 });
 
     var onSuccess = function(data) {
+        var e = document.getElementById('info')
+        e.innerHTML = 'test';
         console.log(data);
     };
 
