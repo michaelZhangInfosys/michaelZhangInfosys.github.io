@@ -31,7 +31,7 @@ this.token||(this.token=b.data);this.disposed||!this.hosted||this.ready||(d=!0)}
                    document.getElementById("info").innerHTML = xhttp.responseText;
                 }
             };
-            xhttp.open("GET", `http://www.omdbapi.com/?t=${q}&apikey=11291606`, true);
+            xhttp.open("GET", `https://www.omdbapi.com/?t=${q}&apikey=11291606`, true);
             xhttp.send();
         }
         console.log(data);
