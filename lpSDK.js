@@ -21,8 +21,19 @@ this.token||(this.token=b.data);this.disposed||!this.hosted||this.ready||(d=!0)}
 });
 
     var onSuccess = function(data) {
-        var e = document.getElementById('info')
-        e.innerHTML = 'test';
+        if (data[data.length - 1].source != 'agent') {
+            var q = data[data.length - 1].text;
+            var e = document.getElementById('info')
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                   // Typical action to be performed when the document is ready:
+                   document.getElementById("info").innerHTML = xhttp.responseText;
+                }
+            };
+            xhttp.open("GET", `http://www.omdbapi.com/?t=${q}&apikey=11291606`, true);
+            xhttp.send();
+        }
         console.log(data);
     };
 
