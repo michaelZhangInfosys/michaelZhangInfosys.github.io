@@ -8,7 +8,7 @@ function identityFn(callback) {
     callback({
         iss: 'web',
         acr: 'loa1',
-        sub: 'tim1'
+        sub: 'time1'
     })
 }
 
